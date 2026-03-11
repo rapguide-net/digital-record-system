@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Updated to a smoother golden-brown gradient to match the image */
+    background: linear-gradient(135deg, #bc7112 0%, #7c410c 50%, #4a2707 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* 2. Sleek Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .container img {
+    width: 4%;
+}
+
+.navbar h2[data-text="Capstone Project"] {
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding-right: 700px;
+    letter-spacing: 2px;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid orange;
+    padding: 8px 25px;
+    left: 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #ff9102;
+    border-color: #fff;
+}
+
+/* 3. The Glassmorphic register Card */
+.register-page {
+    margin: auto;
+    padding: 30px 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.register-page h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #ff8307;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 4. Form Styling */
+.form-group {
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 25px;
+    transition: 0.3s;
+    outline: none;
+}
+
+input:focus {
+    border-color: #fdfcfc;
+}
+
+/* 5. Glowing Button */
+button {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid white;
+    border-radius: 12px;
+    background: #ff9102;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: transparent;
+    color: orangered;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(230, 146, 19, 0.4);
+}
+
+.message p {
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Notification Styling */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+.toast {
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 15px 25px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.4s ease-out;
+}
+
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* --- REGISTER MOBILE DESIGN --- */
+@media (max-width: 480px) {
+    
+    /* 1. Navbar: Maintain slim profile */
+    .navbar .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5%;
+    }
+
+    .navbar h2.title {
+        font-size: 1rem; 
+        white-space: nowrap;
+    }
+
+    .register-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    /* 2. Registration Card: Responsive width & height */
+    .register-page {
+        width: 90%;
+        margin: 80px auto 40px; 
+        padding: 35px 25px;
+        border-radius: 25px;
+        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 107, 53, 0.2);
+    }
+
+    .register-page img {
+        width: 70%;
+    }
+
+    .register-page h1 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    /* 3. Form Spacing: Better vertical flow */
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px; 
+    }
+
+    .form-group label {
+        font-size: 0.80rem;
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 1rem;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+
+    /* 4. Full-Width Submit Button */
+    button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        margin-top: 25px;
+        font-size: 1rem;
+        border-radius: 15px;
+        background: linear-gradient(45deg, #7c410c, #ff6b35);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .register-page, .register-page {
+        width: 90%;
+        margin: 100px auto;
+        padding: 30px 20px;
+    }
+
+    .message p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .notification-container {
+        top: 15px;      
+        right: 10px;    
+        left: 10px;     
+        width: calc(100% - 20px); 
+    }
+
+    .toast {
+        min-width: auto; 
+        width: 100%;     
+        padding: 12px 16px; 
+        font-size: 0.85rem; 
+        gap: 10px;       
+        border-radius: 10px;
+        border-left-width: 4px;
+    }
+
+    .toast i {
+        font-size: 1.1rem;
+    }
+
+    @keyframes slideInMobile {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .toast {
+        animation: slideInMobile 0.4s ease-out;
+    }
+}

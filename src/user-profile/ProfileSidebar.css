@@ -1,0 +1,73 @@
+.sidebar-profile {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.profile-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.display-username {
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+.display-userid {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.profile-links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-links a, .logout-btn {
+  padding: 10px 15px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-links a:hover, .logout-btn:hover {
+  background: #ff6b35;
+  color: white;
+}

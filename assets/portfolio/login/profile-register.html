@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="/assets/images/icons/google logo.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/log/register.css">
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <img src="/assets/images/icons/google logo.png">
+            <h2 class="title" data-text="Capstone Project">Capstone Project</h2>
+            <a href="../login/profile-login.html" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+    <!-- Login Page -->
+    <div class="register-page">
+        <h1>Sign Up</h1>
+        <form id="register-form">
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <button type="submit">Register</button>
+
+            <div class="message">
+                <p>Already have an account? Click the login above.</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <script src="login-system.js"></script>
+</body>
+</html>
